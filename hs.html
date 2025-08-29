@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حسين ستور - Hussein Store</title>
+  <!-- مكتبة الأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4472c4 100%);
+      min-height: 100vh;display:flex;align-items:center;justify-content:center;padding:20px;
+      position:relative;overflow-x:hidden;
+    }
+
+    .container {
+      max-width: 400px;width:100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 25px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* اللوجو الدائري */
+    .logo-container {margin-bottom: 25px;}
+    .logo {
+      width: 120px;height:120px;
+      margin:0 auto 15px;
+      border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,#4472c4,#2a5298);
+      box-shadow:0 15px 35px rgba(68,114,196,0.4);
+      position:relative;overflow:hidden;
+      animation: logoFloat 3s ease-in-out infinite;
+    }
+    .logo img {
+      width:80px;height:80px;border-radius:50%;
+      position:relative;z-index:2;
+    }
+    .logo::before {
+      content:'';position:absolute;top:-50%;left:-50%;
+      width:200%;height:200%;
+      background:linear-gradient(45deg,transparent,rgba(255,255,255,0.2),transparent);
+      transform:rotate(45deg);
+      animation: shimmer 3s linear infinite;
+    }
+    @keyframes logoFloat {
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-10px);}
+    }
+    @keyframes shimmer {
+      0%{transform:translateX(-100%) translateY(-100%) rotate(45deg);}
+      100%{transform:translateX(100%) translateY(100%) rotate(45deg);}
+    }
+
+    h1 {font-size:26px;color:#1e3c72;margin-bottom:15px;}
+    .links {display:flex;flex-direction:column;gap:15px;}
+    .link-button {
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      padding:15px;border-radius:12px;color:#fff;text-decoration:none;font-weight:600;
+      transition:.3s;flex-direction:row-reverse;
+    }
+    .link-button i {font-size:22px;}
+    .instagram {background:linear-gradient(135deg,#e4405f,#c13584,#833ab4);}
+    .whatsapp {background:linear-gradient(135deg,#25d366,#20ba5a);}
+    .facebook {background:linear-gradient(135deg,#1877f2,#0d5cbd);}
+    .telegram {background:linear-gradient(135deg,#0088cc,#006699);}
+    .link-button:hover {transform:translateY(-3px);}
+    .footer {margin-top:20px;font-size:14px;color:#666;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- اللوغو الدائري -->
+    <div class="logo-container">
+      <div class="logo">
+        <img src="حسين.jpg" alt="Hussein Store Logo">
+      </div>
+    </div>
+
+    <h1>حسين ستور</h1>
+    <div class="links">
+      <a href="https://www.instagram.com/hs__stor?igsh=MXRvcHBmamo1NnZoNA==" class="link-button instagram" target="_blank">
+        <i class="fab fa-instagram"></i> <span>إنستغرام</span>
+      </a>
+      <a href="https://wa.me/9647717001534" class="link-button whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i> <span>واتساب</span>
+      </a>
+      <a href="https://www.facebook.com/share/1K3EZUS7D2/" class="link-button facebook" target="_blank">
+        <i class="fab fa-facebook-f"></i> <span>فيسبوك</span>
+      </a>
+      <a href="https://t.me/ws34s" class="link-button telegram" target="_blank">
+        <i class="fab fa-telegram-plane"></i> <span>تليكرام</span>
+      </a>
+    </div>
+
+    <div class="footer">جميع الحقوق محفوظة © حسين ستور</div>
+  </div>
+</body>
+</html>
